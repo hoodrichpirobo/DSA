@@ -1,49 +1,37 @@
 package libraries.dataStructures.models;
 
 /**
- * A model for a generic List with a Point of Interest (POI),
- * which can be used to access the list's elements.
- * 
- * @date February 2019
- * @param <E> type of the List's items
+ * Model for a List with a Point of Interest (POI), or with
+ * Sequential Access to a Collection's Elements
  */
 public interface ListPOI<E> {
-
-    /** Adds element e just before the POI, without moving it.
+    // Modifier methods - state of the List with POI
+    /** adds e to a List before the Element at its POI,
+     * which remains unaltered
      */
     void add(E e);
-
-    /**
-     * IFF !isEnd(): Removes from the list the element the POI
-     * is pointing to, without moving the POI's position.
+    
+    /** IFF !isEnd():
+     * removes from a List the Element that occupies its POI,
+     * which remains unaltered
      */
     void remove();
 
-    /** IFF !isEnd(): Recovers the element that the POI is pointing to.
-     */
-    E get();
-
-    /** Moves the POI to the first element of the list.
-     */
+    // Modifier methods - state of a List's POI
+    /** move the POI to the first element of the list **/
     void begin();
-
-    /** IFF !isEnd(): Moves the POI to the next element of the list.
-     */
+    /** IFF !isEnd(): advances by one item a List's POI **/
     void next();
-
-    /** Moves the POI after the last element of the list.
-     */
+    /** move the POI after the last element of the List **/
     void end();
 
-    /** Checks whether the POI is after the last element.
-     */
+    // Getter methods - state of a List with POI:
+    /** IFF !isEnd(): obtains the Element at the POI of a List **/
+    E get();
+    /** checks whether the POI of a List is at the end (after the last element) **/
     boolean isEnd();
-
-    /** Checks whether the List is empty.
-     */
+    /** checks whether a List with POI is empty **/
     boolean isEmpty();
-
-    /** Returns the number of elements in the List.
-     */
+    /** returns the size of a List, i.e., the number of elements it contains **/
     int size();
 }

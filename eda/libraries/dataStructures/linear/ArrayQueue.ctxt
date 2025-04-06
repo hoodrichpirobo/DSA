@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=ArrayQueue
+comment1.params=
+comment1.target=ArrayQueue()
+comment1.text=creates\ an\ empty\ Queue\ *
+comment2.params=e
+comment2.target=void\ enqueue(java.lang.Object)
+comment2.text=adds\ Element\ e\ to\ a\ Queue,\ or\ places\ it\ at\ its\ end\ *
+comment3.params=
+comment3.target=void\ duplicateCircularArray()
+comment4.params=index
+comment4.target=int\ increment(int)
+comment5.params=
+comment5.target=java.lang.Object\ dequeue()
+comment5.text=\ IFF\ \!isEmpty()\:\r\nobtains\ and\ removes\ from\ a\ Queue\ its\ first\ Element\ *
+comment6.params=
+comment6.target=java.lang.Object\ first()
+comment6.text=\ IFF\ \!isEmpty()\:\r\n\ \ obtains\ the\ first\ Element\ of\ a\ Queue,\r\ni.e.,\ first\ pushed\ into\ the\ Queue\ *
+comment7.params=
+comment7.target=boolean\ isEmpty()
+comment7.text=checks\ whether\ a\ Queue\ is\ empty\ *
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment8.text=\ returns\ a\ String\ with\ the\ Elements\ of\ a\ Queue\ in\ FIFO\ order,\r\n\ or\ insertion\ order,\ and\ with\ the\ format\ used\ in\ the\ Java\ standard.\r\n\ Thus,\ a\ Queue\ with\ Integer\ elements\ from\ 1\ to\ 4\ in\ FIFO\ order,\r\n\ toString\ returns\ [1,\ 2,\ 3,\ 4];\ if\ the\ Queue\ is\ empty,\ returns\ []\r\n
+numComments=9
