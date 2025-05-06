@@ -79,6 +79,38 @@ public class VoterList {
         return -1;
     }
 
+    public static void testRemove() {
+        VoterList vl = new VoterList(true, 4);
+        System.out.println(vl);
+        vl.census.begin();
+        vl.census.next();
+        vl.remove(vl.census.get());
+        System.out.println("\nRemoving the second resident...");
+        System.out.println(vl);
+        vl.census.begin();
+        vl.remove(vl.census.get());
+        System.out.println("\nRemoving the first resident...");
+        System.out.println(vl);
+        vl.census.begin();
+        vl.census.next();
+        vl.remove(vl.census.get());
+        System.out.println("\nRemoving the last resident...");
+        System.out.println(vl);
+    }
+    
+    public boolean remove(Resident r) {
+        this.census.begin();
+        for(int i = 0; i < census.size(); i++){
+            Resident r2 = census.get();
+            if(r.equals(r2)){
+                this.census.remove();
+                this.size--;
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public VoterList getLocalCensus(int pc1, int pc2){
         VoterList ans = new VoterList(census instanceof SortedLinkedListPOI, 0);
         census.begin();

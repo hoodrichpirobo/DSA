@@ -152,6 +152,19 @@ public class LibrarySearch {
         }
         return res;
     }
+    
+    public String condensedSearch(String aWord){
+        String res = "";
+        Term key = new Term(aWord.toLowerCase());
+        ListPOI<Posting> value = index.get(key);
+        if (value == null) {
+            res += "The word \"" + aWord + "\" doesn't appear in any book on this library";
+        } else {
+            res += "Found " + value.size() + "  instances of the word \"" + aWord
+                   + "\" in \n" + value;
+        }
+        return res;
+    }
 
     /** Checks whether aWord is a term in a Digital Library's Index, i.e.,
      *  whether aWord is non-empty and contains only letters. */
